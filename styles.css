@@ -81,6 +81,13 @@ font-weight: bold;
   color:white;
   font-size:  36px;
   margin-top: 20px;
+}
 
-
+#created-by{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color:white;
+  font-size:  24px;
+  margin-top: 20px;
 }
