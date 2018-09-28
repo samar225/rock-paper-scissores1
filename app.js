@@ -51,9 +51,13 @@ function win( userChoice , computerChoice ){
   userScore++;
   var user="user".fontsize(3).sub();
   var comp="comp".fontsize(3).sub();
+  var userChoice_div=document.getElementById(userChoice);
   user_score_span.innerHTML=userScore;
   comp_score_span.innerHTML=computerScor;
   result_p.innerHTML=convertToWord(userChoice)+ user +" beats "+convertToWord(computerChoice)+comp;
+  userChoice_div.classList.add("green-glow");
+  setTimeout( () => userChoice_div.classList.remove('green-glow'),600);
+
   console.log("win");
 }
 
@@ -61,9 +65,13 @@ function lose( userChoice , computerChoice ){
   computerScor++;
   var user="user".fontsize(3).sub();
   var comp="comp".fontsize(3).sub();
+  var userChoice_div=document.getElementById(userChoice);
   comp_score_span.innerHTML=computerScor;
   user_score_span.innerHTML=userScore;
   result_p.innerHTML=convertToWord(userChoice)+ user +" lost "+convertToWord(computerChoice)+comp;
+  userChoice_div.classList.add("red-glow");
+  setTimeout( () => userChoice_div.classList.remove('red-glow'),600);
+
   console.log("loser");
 }
 
@@ -71,7 +79,11 @@ function draw( userChoice , computerChoice ){
   console.log("draw");
   var user="user".fontsize(3).sub();
   var comp="comp".fontsize(3).sub();
+  var userChoice_div=document.getElementById(userChoice);
   result_p.innerHTML=convertToWord(userChoice)+user +" equals "+convertToWord(computerChoice)+comp;
+  userChoice_div.classList.add("gray-glow");
+  setTimeout( () => userChoice_div.classList.remove('gray-glow'),600);
+
 }
 
 function main(){
